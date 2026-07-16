@@ -226,9 +226,7 @@ All APIs have been tested using **Postman**.
 
 > Add a screenshot here showing the folder structure.
 
-```text
-screenshots/project-structure.png
-```
+![ProjectStructure](screenshots/project-structure.png)
 
 ---
 
@@ -242,9 +240,18 @@ screenshots/project-structure.png
 - Forgot Password
 - Reset Password
 
-```text
-screenshots/auth/
-```
+<div align="center">
+  <!-- Row 1 -->
+  <img src="screenshots/auth/register.png" width="45%" alt="Image 1">
+  <img src="screenshots/auth/login.png" width="45%" alt="Image 2">
+  <br><br>
+  <!-- Row 2 -->
+  <img src="screenshots/auth/logout.png" width="45%" alt="Image 3">
+  <img src="screenshots/auth/forgot-password.png" width="45%" alt="Image 4">
+  <br><br>
+  <!-- Row 3 (Centered) -->
+  <img src="screenshots/auth/reset-password.png" width="45%" alt="Image 5">
+</div>
 
 ---
 
@@ -257,9 +264,15 @@ screenshots/auth/
 - Update Profile
 - Delete Profile
 
-```text
-screenshots/users/
-```
+<div align="center">
+  <!-- Row 1 -->
+  <img src="screenshots/users/get-profile.png" width="45%" alt="Image 1">
+  <img src="screenshots/users/get-profile-by-id.png" width="45%" alt="Image 2">
+  <br><br>
+  <!-- Row 2 -->
+  <img src="screenshots//users/update-profile.png" width="45%" alt="Image 3">
+  <img src="screenshots/users/delete-profile.png" width="45%" alt="Image 4">
+</div>
 
 ---
 
@@ -275,9 +288,20 @@ screenshots/users/
 - Duplicate Document
 - Delete Document
 
-```text
-screenshots/documents/
-```
+<div align="center">
+  <!-- Row 1 -->
+  <img src="screenshots/documents/create-document.png" width="30%" alt="Image 1">
+  <img src="screenshots/documents/get-all-documents.png" width="30%" alt="Image 2">
+  <img src="screenshots/documents/get-document-id.png" width="30%" alt="Image 3">
+  <br><br>
+  <!-- Row 2 -->
+  <img src="screenshots/documents/update-document.png" width="30%" alt="Image 4">
+  <img src="screenshots/documents/delete-document.png" width="30%" alt="Image 5">
+  <img src="screenshots/documents/import-document.png" width="30%" alt="Image 6">
+  <br><br>
+  <!-- Row 3 (Centered Final Image) -->
+  <img src="screenshots/documents/duplicate-document.png" width="45%" alt="Image 7">
+</div>
 
 ---
 

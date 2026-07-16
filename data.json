@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1784171354226,
+      "name": "Deepesh",
+      "email": "deepesh2206@gmail.com",
+      "password": "456123"
+    },
+    {
+      "id": 1784181245733,
+      "name": "Divya Bora",
+      "email": "divya235@gmail.com",
+      "password": "98765"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1784177150395,
+      "title": "Software Engineer Resume",
+      "template": "Modern",
+      "content": {
+        "personalInfo": {
+          "name": "Deepesh Singh",
+          "email": "deepesh2206@gmail.com"
+        },
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "projects": [
+          "ResumeFlow"
+        ]
+      },
+      "createdBy": 1784025792323,
+      "createdAt": "2026-07-16T04:45:50.394Z",
+      "updatedAt": "2026-07-16T04:45:50.394Z"
+    },
+    {
+      "id": 1784181686796,
+      "title": "Google Resume",
+      "template": "Professional",
+      "content": {
+        "personalInfo": {
+          "name": "Divya Bora",
+          "email": "divya235@gmail.com"
+        },
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Node.js",
+          "Express.js"
+        ],
+        "projects": [
+          "ResumeFlow"
+        ]
+      },
+      "createdBy": 1784025792324,
+      "createdAt": "2026-07-16T06:01:26.789Z",
+      "updatedAt": "2026-07-16T06:03:32.754Z"
+    }
+  ],
+  "templates": [],
+  "applications": []
+}

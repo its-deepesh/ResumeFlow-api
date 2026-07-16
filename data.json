@@ -59,6 +59,39 @@
       "createdBy": 1784025792324,
       "createdAt": "2026-07-16T06:01:26.789Z",
       "updatedAt": "2026-07-16T06:03:32.754Z"
+    },
+    {
+      "id": 1784199880926,
+      "title": "Resume from LinkedIn",
+      "template": "Modern",
+      "content": "Imported profile content",
+      "createdBy": 1784025792344,
+      "createdAt": "2026-07-16T11:04:40.926Z",
+      "updatedAt": "2026-07-16T11:04:40.926Z"
+    },
+    {
+      "id": 1784200586675,
+      "title": "Google Resume (Copy)",
+      "template": "Professional",
+      "content": {
+        "personalInfo": {
+          "name": "Divya Bora",
+          "email": "divya235@gmail.com"
+        },
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Node.js",
+          "Express.js"
+        ],
+        "projects": [
+          "ResumeFlow"
+        ]
+      },
+      "createdBy": 1784025792324,
+      "createdAt": "2026-07-16T11:16:26.675Z",
+      "updatedAt": "2026-07-16T11:16:26.675Z"
     }
   ],
   "templates": [],

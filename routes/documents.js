@@ -148,5 +148,75 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+router.post("/import", (req, res) => {
+    const jsonData = readData();
+
+    const{ title, template, content, createdBy} = req.body;
+
+    if(!title || !template){
+        return res.status(400).json({
+            success: false,
+            message: "Title and template are required."
+        });
+    }
+
+    const newDocument = {
+        id: Date.now(),
+        title,
+        template,
+        content,
+        createdBy,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    };
+
+    jsonData.documents.push(newDocument);
+
+    writeData(jsonData);
+
+    return res.status(201).json({
+        success: true,
+        message: "Document imported successfully",
+        document: newDocument
+    });
+});
+
+router.post("/:id/duplicate", (req, res) => {
+    const jsonData = readData();
+
+    const id = Number(req.params.id);
+
+    const document = jsonData.documents.find(
+        document => document.id === id
+    );
+
+    if(!document){
+        return res.status(404).json({
+            success: false,
+            message: "Document not found"
+        });
+    }
+
+    const duplicateDocument = {
+        id: Date.now(),
+        title: document.title + " (Copy)",
+        template: document.template,
+        content: document.content,
+        createdBy: document.createdBy,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    }
+
+    jsonData.documents.push(duplicateDocument);
+
+    writeData(jsonData);
+
+    return res.status(201).json({
+        success: true,
+        message: "Document duplicated successfully",
+        document: duplicateDocument
+    });
+});
+
 // Export router so it can be used in app.js
 module.exports = router;

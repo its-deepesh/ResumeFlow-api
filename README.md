@@ -1,21 +1,24 @@
 # ResumeFlow API
 
-A RESTful backend API for **ResumeFlow**, built using **Node.js** and **Express.js**. This project is part of my internship, where I am learning backend development by implementing REST APIs for authentication, user management, and resume document management.
+A RESTful backend API built with **Node.js** and **Express.js** for the ResumeFlow project. This project is being developed as part of my Full Stack Development Internship.
+
+The API currently supports user authentication, user profile management, and resume document management using a JSON file as the data store.
 
 ---
 
-## 🚀 Tech Stack
+# 🚀 Tech Stack
 
 - Node.js
 - Express.js
 - JavaScript
-- File System (`fs`)
 - REST API
+- File System (fs)
 - JSON
+- Postman
 
 ---
 
-## 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 resume-api/
@@ -38,86 +41,18 @@ resume-api/
 
 ---
 
-## 📌 Features Implemented
-
-### 🔐 Authentication APIs
-
-- Register User
-- Login User (Mock Token)
-- Logout User
-- Forgot Password
-- Reset Password
-
----
-
-### 👤 User APIs
-
-- Get User Profile
-- Get User Profile by ID
-- Update User Profile
-- Delete User Profile
-
----
-
-### 📄 Document APIs
-
-- Create Document
-- Get All Documents
-- Get Document by ID
-- Update Document
-- Delete Document
-
----
-
-## 📂 API Endpoints
-
-### Authentication
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/register` | Register a new user |
-| POST | `/api/auth/login` | Login user and return mock token |
-| POST | `/api/auth/logout` | Logout user |
-| POST | `/api/auth/forgot-password` | Mock forgot password |
-| POST | `/api/auth/reset-password` | Reset password |
-
----
-
-### Users
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/users/profile` | Get user profile |
-| GET | `/api/users/profile/:id` | Get profile by ID |
-| PUT | `/api/users/profile/:id` | Update profile |
-| DELETE | `/api/users/profile/:id` | Delete profile |
-
----
-
-### Documents
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/documents` | Create document |
-| GET | `/api/documents` | Get all documents |
-| GET | `/api/documents/:id` | Get document by ID |
-| PUT | `/api/documents/:id` | Update document |
-| DELETE | `/api/documents/:id` | Delete document |
-
----
-
-## 📦 Installation
+# ⚙️ Installation
 
 Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/ResumeFlow-api.git
 ```
 
-Move into the project directory
+Move into the project
 
 ```bash
-cd resume-api
+cd ResumeFlow-api
 ```
 
 Install dependencies
@@ -132,37 +67,145 @@ Start the server
 node app.js
 ```
 
+The server will start on:
+
+```text
+http://localhost:3000
+```
+
 ---
 
-## 🧪 API Testing
+# 📬 API Endpoints
 
-All APIs were tested using **Postman**.
+## 🔐 Authentication
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | Login user and return a mock token |
+| POST | `/api/auth/logout` | Logout the current user |
+| POST | `/api/auth/forgot-password` | Mock forgot password API |
+| POST | `/api/auth/reset-password` | Reset user password |
 
 ---
 
-## 📚 Concepts Learned
+## 👤 Users
 
-- REST API
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/users/profile` | Get first user profile |
+| GET | `/api/users/profile/:id` | Get profile by user ID |
+| PUT | `/api/users/profile/:id` | Update user profile |
+| DELETE | `/api/users/profile/:id` | Delete user profile |
+
+---
+
+## 📄 Documents
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/documents` | Create a new document |
+| POST | `/api/documents/import` | Import a new document |
+| GET | `/api/documents` | Get all documents |
+| GET | `/api/documents/:id` | Get document by ID |
+| PUT | `/api/documents/:id` | Update document |
+| POST | `/api/documents/:id/duplicate` | Duplicate an existing document |
+| DELETE | `/api/documents/:id` | Delete a document |
+
+---
+
+# 📖 Features
+
+## 🔐 Authentication Module
+
+The authentication module handles all user authentication related operations.
+
+### Features
+
+- User Registration
+- User Login
+- User Logout
+- Forgot Password
+- Reset Password
+
+Currently, authentication uses a **mock token** as required by the internship task.
+
+---
+
+## 👤 User Module
+
+This module manages user profiles.
+
+### Features
+
+- Fetch User Profile
+- Fetch User by ID
+- Update User Profile
+- Delete User Profile
+
+---
+
+## 📄 Document Module
+
+This is the core module of the ResumeFlow API.
+
+### Features
+
+- Create Resume
+- Import Resume
+- View All Resumes
+- View Resume by ID
+- Update Resume
+- Duplicate Resume
+- Delete Resume
+
+Each document contains:
+
+- Unique ID
+- Title
+- Template
+- Content
+- Created By
+- Created At
+- Updated At
+
+---
+
+# 📚 Concepts Practiced
+
+- Express Routing
+- REST API Design
 - CRUD Operations
-- Express Router
-- Route Parameters
-- Request Body
+- HTTP Methods
 - HTTP Status Codes
+- Request Parameters
+- Request Body
 - JSON Handling
-- File System (`fs`)
-- Reading JSON files
-- Writing JSON files
-- Utility Functions
+- File System (fs)
 - Code Reusability
-- Modular Project Structure
-- API Testing using Postman
+- Utility Functions
+- Modular Folder Structure
+- API Testing with Postman
 
 ---
 
-## 📌 Status Codes Used
+# 📁 Utility Functions
 
-| Status | Meaning |
-|---------|----------|
+A reusable utility file (`utils/file.js`) is used for reading and writing data.
+
+### Functions
+
+- `readData()`
+- `writeData()`
+
+This removes repeated file handling code from route files and improves code reusability.
+
+---
+
+# 📊 HTTP Status Codes Used
+
+| Code | Meaning |
+|------|---------|
 | 200 | OK |
 | 201 | Created |
 | 400 | Bad Request |
@@ -171,31 +214,96 @@ All APIs were tested using **Postman**.
 
 ---
 
-## 📈 Project Status
+# 🧪 Testing
 
-### ✅ Completed
-
-- Authentication Module
-- User Module
-- Document CRUD Module
-- Utility Functions
-
-### 🚧 In Progress
-
-- Document Import
-- Document Duplicate
-- Sections API
-- Version API
-- Templates API
-- AI APIs
-- Applications API
+All APIs have been tested using **Postman**.
 
 ---
 
-## 👨‍💻 Author
+# 📸 Screenshots
+
+## Project Structure
+
+> Add a screenshot here showing the folder structure.
+
+```text
+screenshots/project-structure.png
+```
+
+---
+
+## Authentication APIs
+
+> Add screenshots of:
+
+- Register
+- Login
+- Logout
+- Forgot Password
+- Reset Password
+
+```text
+screenshots/auth/
+```
+
+---
+
+## User APIs
+
+> Add screenshots of:
+
+- Get Profile
+- Get User By ID
+- Update Profile
+- Delete Profile
+
+```text
+screenshots/users/
+```
+
+---
+
+## Document APIs
+
+> Add screenshots of:
+
+- Create Document
+- Import Document
+- Get All Documents
+- Get Document By ID
+- Update Document
+- Duplicate Document
+- Delete Document
+
+```text
+screenshots/documents/
+```
+
+---
+
+# 📈 Current Progress
+
+## ✅ Completed
+
+- Authentication APIs
+- User APIs
+- Document APIs
+- Utility Functions
+
+## 🚧 In Progress
+
+- Templates APIs
+- AI APIs
+- Applications APIs
+- Sections APIs
+- Versions APIs
+
+---
+
+# 👨‍💻 Author
 
 **Deepesh Singh**
 
-BCA Student | Backend Developer (Learning)
+BCA Student | Full Stack Developer (Learning)
 
----
+GitHub: https://github.com/its-deepesh

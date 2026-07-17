@@ -5,6 +5,9 @@ const express = require('express');
 const authRoute = require('./routes/auth');
 const usersRoute = require('./routes/users');
 const documentsRoute = require('./routes/documents');
+const templatesRoute = require('./routes/templates');
+const aiRoute = require('./routes/ai');
+const applicationRoute = require('./routes/application');
 
 // Create an Express application
 const app = express();
@@ -19,6 +22,9 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/documents", documentsRoute);
+app.use("/api/templates", templatesRoute);
+app.use("/api/ai", aiRoute);
+app.use("/api/application", applicationRoute);
 
 // Health check / Welcome route
 app.get('/', (req, res) => {

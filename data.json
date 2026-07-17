@@ -58,7 +58,7 @@
       },
       "createdBy": 1784025792324,
       "createdAt": "2026-07-16T06:01:26.789Z",
-      "updatedAt": "2026-07-16T06:03:32.754Z"
+      "updatedAt": "2026-07-16T12:50:07.920Z"
     },
     {
       "id": 1784199880926,
@@ -92,8 +92,55 @@
       "createdBy": 1784025792324,
       "createdAt": "2026-07-16T11:16:26.675Z",
       "updatedAt": "2026-07-16T11:16:26.675Z"
+    },
+    {
+      "id": 1784206307914,
+      "title": "Resume from Facebook",
+      "template": "Professional",
+      "content": "Imported profile content",
+      "createdBy": 178402579286,
+      "createdAt": "2026-07-16T12:51:47.914Z",
+      "updatedAt": "2026-07-16T12:51:47.914Z"
+    },
+    {
+      "id": 1784206359193,
+      "title": "Software Engineer Resume (Copy)",
+      "template": "Modern",
+      "content": {
+        "personalInfo": {
+          "name": "Deepesh Singh",
+          "email": "deepesh2206@gmail.com"
+        },
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "projects": [
+          "ResumeFlow"
+        ]
+      },
+      "createdBy": 1784025792323,
+      "createdAt": "2026-07-16T12:52:39.193Z",
+      "updatedAt": "2026-07-16T12:52:39.193Z"
     }
   ],
-  "templates": [],
+  "templates": [
+    {
+      "id": 1,
+      "name": "Modern",
+      "category": "Resume"
+    },
+    {
+      "id": 2,
+      "name": "Professional",
+      "category": "Resume"
+    },
+    {
+      "id": 3,
+      "name": "Creative",
+      "category": "Resume"
+    }
+  ],
   "applications": []
 }

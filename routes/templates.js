@@ -3,6 +3,7 @@ const { readData } = require("../utils/file");
 
 const router = express.Router();
 
+// Retrieve all resume templates
 router.get("/", (req, res) => {
     const jsonData = readData();
 
@@ -21,6 +22,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// Retrieve a specific resume template by ID
 router.get("/:id", (req, res) => {
     const jsonData = readData();
 

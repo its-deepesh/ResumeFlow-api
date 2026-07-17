@@ -305,21 +305,11 @@ All APIs have been tested using **Postman**.
 
 ## Project Structure
 
-> Add a screenshot here showing the folder structure.
-
 ![ProjectStructure](screenshots/project-structure.png)
 
 ---
 
 ## Authentication APIs
-
-> Add screenshots of:
-
-- Register
-- Login
-- Logout
-- Forgot Password
-- Reset Password
 
 <div align="center">
   <!-- Row 1 -->
@@ -338,13 +328,6 @@ All APIs have been tested using **Postman**.
 
 ## User APIs
 
-> Add screenshots of:
-
-- Get Profile
-- Get User By ID
-- Update Profile
-- Delete Profile
-
 <div align="center">
   <!-- Row 1 -->
   <img src="screenshots/users/get-profile.png" width="45%" alt="Image 1">
@@ -360,14 +343,6 @@ All APIs have been tested using **Postman**.
 ## Document APIs
 
 > Add screenshots of:
-
-- Create Document
-- Import Document
-- Get All Documents
-- Get Document By ID
-- Update Document
-- Duplicate Document
-- Delete Document
 
 <div align="center">
   <!-- Row 1 -->

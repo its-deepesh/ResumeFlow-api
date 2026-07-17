@@ -3,6 +3,7 @@ const { readData, writeData } = require("../utils/file");
 
 const router = express.Router();
 
+// Create a new job application
 router.post("/", (req, res) => {
     const {
         company,
@@ -39,6 +40,7 @@ router.post("/", (req, res) => {
     });
 });
 
+// Retrieve all job applications
 router.get("/", (req, res) => {
     const jsonData = readData();
 
@@ -57,6 +59,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// Retrieve a specific job application by ID
 router.get("/:id", (req, res) => {
     const jsonData = readData();
 
@@ -79,6 +82,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// Update an existing job application by ID
 router.put("/:id", (req, res) => {
     const jsonData = readData();
 
@@ -123,6 +127,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
+// Delete a job application by ID
 router.delete("/:id", (req, res) => {
     const jsonData = readData();
 

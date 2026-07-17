@@ -34,7 +34,9 @@
       },
       "createdBy": 1784025792323,
       "createdAt": "2026-07-16T04:45:50.394Z",
-      "updatedAt": "2026-07-16T04:45:50.394Z"
+      "updatedAt": "2026-07-16T04:45:50.394Z",
+      "sections": [],
+      "versions": []
     },
     {
       "id": 1784181686796,
@@ -58,7 +60,36 @@
       },
       "createdBy": 1784025792324,
       "createdAt": "2026-07-16T06:01:26.789Z",
-      "updatedAt": "2026-07-16T12:50:07.920Z"
+      "updatedAt": "2026-07-16T12:50:07.920Z",
+      "sections": [],
+      "versions": [
+        {
+          "id": 1784290262345,
+          "versionNumber": 1,
+          "createdAt": "2026-07-17T12:11:02.345Z",
+          "snapshot": {
+            "title": "Google Resume",
+            "template": "Professional",
+            "content": {
+              "personalInfo": {
+                "name": "Divya Bora",
+                "email": "divya235@gmail.com"
+              },
+              "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Node.js",
+                "Express.js"
+              ],
+              "projects": [
+                "ResumeFlow"
+              ]
+            },
+            "sections": []
+          }
+        }
+      ]
     },
     {
       "id": 1784199880926,
@@ -67,7 +98,9 @@
       "content": "Imported profile content",
       "createdBy": 1784025792344,
       "createdAt": "2026-07-16T11:04:40.926Z",
-      "updatedAt": "2026-07-16T11:04:40.926Z"
+      "updatedAt": "2026-07-16T11:04:40.926Z",
+      "sections": [],
+      "versions": []
     },
     {
       "id": 1784200586675,
@@ -91,7 +124,9 @@
       },
       "createdBy": 1784025792324,
       "createdAt": "2026-07-16T11:16:26.675Z",
-      "updatedAt": "2026-07-16T11:16:26.675Z"
+      "updatedAt": "2026-07-16T11:16:26.675Z",
+      "sections": [],
+      "versions": []
     },
     {
       "id": 1784206307914,
@@ -100,7 +135,9 @@
       "content": "Imported profile content",
       "createdBy": 178402579286,
       "createdAt": "2026-07-16T12:51:47.914Z",
-      "updatedAt": "2026-07-16T12:51:47.914Z"
+      "updatedAt": "2026-07-16T12:51:47.914Z",
+      "sections": [],
+      "versions": []
     },
     {
       "id": 1784206359193,
@@ -122,7 +159,9 @@
       },
       "createdBy": 1784025792323,
       "createdAt": "2026-07-16T12:52:39.193Z",
-      "updatedAt": "2026-07-16T12:52:39.193Z"
+      "updatedAt": "2026-07-16T12:52:39.193Z",
+      "sections": [],
+      "versions": []
     }
   ],
   "templates": [
@@ -142,5 +181,13 @@
       "category": "Resume"
     }
   ],
-  "applications": []
+  "applications": [
+    {
+      "id": 1784271475295,
+      "company": "Microsoft",
+      "position": "Software Developer",
+      "status": "Recruited",
+      "appliedDate": "2026-07-16"
+    }
+  ]
 }

@@ -2,7 +2,7 @@
 
 A RESTful backend API built with **Node.js** and **Express.js** for the ResumeFlow project. This project is being developed as part of my Full Stack Development Internship.
 
-The API currently supports user authentication, user profile management, and resume document management using a JSON file as the data store.
+The API currently supports authentication, user management, resume document management, template management, AI-powered mock endpoints, and job application tracking using a JSON file as the data store.
 
 ---
 
@@ -26,7 +26,10 @@ resume-api/
 ├── routes/
 │   ├── auth.js
 │   ├── users.js
-│   └── documents.js
+│   ├── documents.js
+│   ├── templates.js
+│   ├── ai.js
+│   └── applications.js
 │
 ├── utils/
 │   └── file.js
@@ -36,6 +39,7 @@ resume-api/
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
+├── screenshots/
 └── README.md
 ```
 
@@ -75,7 +79,7 @@ http://localhost:3000
 
 ---
 
-# 📬 API Endpoints
+# 📚 REST API Documentation
 
 ## 🔐 Authentication
 
@@ -111,6 +115,38 @@ http://localhost:3000
 | PUT | `/api/documents/:id` | Update document |
 | POST | `/api/documents/:id/duplicate` | Duplicate an existing document |
 | DELETE | `/api/documents/:id` | Delete a document |
+
+---
+
+## 🎨 Templates
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/templates` | Get all templates |
+| GET | `/api/templates/:id` | Get template by ID |
+
+---
+
+## 🤖 AI
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/ai/bullets` | Generate resume bullet points (Mock) |
+| POST | `/api/ai/summary` | Generate professional summary (Mock) |
+| POST | `/api/ai/rewrite` | Rewrite text (Mock) |
+| POST | `/api/ai/prompt` | Generate AI response (Mock) |
+
+---
+
+## 📋 Applications
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/applications` | Create job application |
+| GET | `/api/applications` | Get all applications |
+| GET | `/api/applications/:id` | Get application by ID |
+| PUT | `/api/applications/:id` | Update application |
+| DELETE | `/api/applications/:id` | Delete application |
 
 ---
 
@@ -171,6 +207,46 @@ Each document contains:
 
 ---
 
+## 🎨 Templates Module
+
+Provides available resume templates.
+
+### Features
+
+- View All Templates
+- View Template by ID
+
+---
+
+## 🤖 AI Module
+
+Mock AI endpoints for resume enhancement.
+
+### Features
+
+- Generate Resume Bullet Points
+- Generate Professional Summary
+- Rewrite Resume Content
+- AI Prompt Response
+
+> **Note:** These are mock endpoints implemented as part of the internship. No external AI service is used.
+
+---
+
+## 📋 Applications Module
+
+Tracks job applications.
+
+### Features
+
+- Create Application
+- View All Applications
+- View Application by ID
+- Update Application
+- Delete Application
+
+---
+
 # 📚 Concepts Practiced
 
 - Express Routing
@@ -186,6 +262,11 @@ Each document contains:
 - Utility Functions
 - Modular Folder Structure
 - API Testing with Postman
+- Express Middleware
+- Express Router
+- API Modularization
+- Mock API Development
+- JSON Data Persistence
 
 ---
 
@@ -224,21 +305,11 @@ All APIs have been tested using **Postman**.
 
 ## Project Structure
 
-> Add a screenshot here showing the folder structure.
-
 ![ProjectStructure](screenshots/project-structure.png)
 
 ---
 
 ## Authentication APIs
-
-> Add screenshots of:
-
-- Register
-- Login
-- Logout
-- Forgot Password
-- Reset Password
 
 <div align="center">
   <!-- Row 1 -->
@@ -257,13 +328,6 @@ All APIs have been tested using **Postman**.
 
 ## User APIs
 
-> Add screenshots of:
-
-- Get Profile
-- Get User By ID
-- Update Profile
-- Delete Profile
-
 <div align="center">
   <!-- Row 1 -->
   <img src="screenshots/users/get-profile.png" width="45%" alt="Image 1">
@@ -279,14 +343,6 @@ All APIs have been tested using **Postman**.
 ## Document APIs
 
 > Add screenshots of:
-
-- Create Document
-- Import Document
-- Get All Documents
-- Get Document By ID
-- Update Document
-- Duplicate Document
-- Delete Document
 
 <div align="center">
   <!-- Row 1 -->
@@ -305,6 +361,50 @@ All APIs have been tested using **Postman**.
 
 ---
 
+## Templates APIs
+
+<div align="center">
+
+<img src="screenshots/templates/get-all-templates.png" width="45%">
+<img src="screenshots/templates/get-template-by-id.png" width="45%">
+
+</div>
+
+---
+
+## AI APIs
+
+<div align="center">
+
+<img src="screenshots/ai/bullets.png" width="45%">
+<img src="screenshots/ai/summary.png" width="45%">
+
+<br><br>
+
+<img src="screenshots/ai/rewrite.png" width="45%">
+<img src="screenshots/ai/prompt.png" width="45%">
+
+</div>
+
+---
+
+## Applications APIs
+
+<div align="center">
+
+<img src="screenshots/applications/create-application.png" width="30%">
+<img src="screenshots/applications/get-all-applications.png" width="30%">
+<img src="screenshots/applications/get-application-by-id.png" width="30%">
+
+<br><br>
+
+<img src="screenshots/applications/update-application.png" width="45%">
+<img src="screenshots/applications/delete-application.png" width="45%">
+
+</div>
+
+---
+
 # 📈 Current Progress
 
 ## ✅ Completed
@@ -312,15 +412,25 @@ All APIs have been tested using **Postman**.
 - Authentication APIs
 - User APIs
 - Document APIs
+- Template APIs
+- AI APIs
+- Application APIs
 - Utility Functions
 
 ## 🚧 In Progress
 
-- Templates APIs
-- AI APIs
-- Applications APIs
 - Sections APIs
 - Versions APIs
+
+---
+
+# 📊 Project Statistics
+
+- **Modules Completed:** 6 / 8
+- **REST APIs Implemented:** 27+
+- **HTTP Methods Used:** GET, POST, PUT, DELETE
+- **Data Storage:** JSON File
+- **API Testing Tool:** Postman
 
 ---
 

@@ -1,8 +1,6 @@
-// Import required modules
 const { readData, writeData } = require("../utils/file");
 const express = require("express");
 
-// Create a mini router for authentication-related routes
 const router = express.Router();
 
 // POST /register - Register a new user
@@ -84,6 +82,7 @@ router.post("/login", (req, res) => {
     });
 });
 
+// POST /logout - Logout the current user
 router.post("/logout", (req, res) => {
     return res.status(200).json({
         success: true,
@@ -91,7 +90,7 @@ router.post("/logout", (req, res) => {
     });
 });
 
-// Forgot Password
+// POST /forgot-password - Send a password reset link to the user
 router.post("/forgot-password", (req, res) => {
     const jsonData = readData();
 
@@ -121,6 +120,7 @@ router.post("/forgot-password", (req, res) => {
     });
 })
 
+// POST /reset-password - Reset the user's password using the provided details
 router.post("/reset-password", (req, res) => {
     const jsonData = readData();
 

@@ -1,8 +1,8 @@
 # ResumeFlow API
 
-The ResumeFlow API is a RESTful backend application built with Node.js and Express.js as part of my Full Stack Development Internship.
+The ResumeFlow API is a RESTful backend application built with **Node.js** and **Express.js** following the **MVC (Model-View-Controller)** architecture.
 
-It provides APIs for user authentication, profile management, resume document management, resume templates, AI-powered mock services, job application tracking, resume sections & items, and document version history using a JSON file as the data store.
+The project provides APIs for authentication, user management, resume documents, templates, AI-powered mock services, job applications, resume sections, items, and version management. Data is currently stored in a JSON file using a centralized database model.
 
 ---
 
@@ -15,6 +15,8 @@ It provides APIs for user authentication, profile management, resume document ma
 - File System (fs)
 - JSON
 - Postman
+- MVC Architecture
+- Express Middleware
 
 ---
 
@@ -23,36 +25,45 @@ It provides APIs for user authentication, profile management, resume document ma
 ```text
 resume-api/
 │
+├── controllers/
+│   ├── authController.js
+│   ├── usersController.js
+│   ├── documentsController.js
+│   ├── sectionsController.js
+│   ├── itemsController.js
+│   ├── versionsController.js
+│   ├── templatesController.js
+│   ├── aiController.js
+│   └── applicationsController.js
+│
+├── middleware/
+│   ├── logger.js
+│   ├── authValidation.js
+│   ├── userValidation.js
+│   ├── documentValidation.js
+│   ├── sectionValidation.js
+│   ├── itemValidation.js
+│   ├── aiValidation.js
+│   └── applicationValidation.js
+│
+├── models/
+│   └── database.js
+│
 ├── routes/
 │   ├── auth.js
 │   ├── users.js
 │   ├── documents.js
 │   ├── templates.js
 │   ├── ai.js
-│   └── applications.js
-│
-├── utils/
-│   └── file.js
+│   ├── applications.js
+│   └── index.js
 │
 ├── screenshots/
-│   ├── auth/
-│   ├── users/
-│   ├── documents/
-│   ├── templates/
-│   ├── ai/
-│   ├── applications/
-│   ├── sections/
-│   └── versions/
-│
 ├── data.json
 ├── app.js
 ├── package.json
-├── package-lock.json
-├── .gitignore
 └── README.md
 ```
-
----
 
 # ⚙️ Installation
 
@@ -85,6 +96,57 @@ The server will start on:
 ```text
 http://localhost:3000
 ```
+
+---
+
+# 🏗 MVC Architecture
+
+The project follows the MVC (Model-View-Controller) architecture.
+
+- **Routes** define API endpoints.
+- **Controllers** contain business logic.
+- **Models** interact with the JSON database.
+- **Middleware** handles logging and request validation.
+
+Request Flow:
+
+Client
+↓
+Routes
+↓
+Validation Middleware
+↓
+Controllers
+↓
+Models (database.js)
+↓
+data.json
+↓
+Response
+
+---
+
+# ⚙ Middleware
+
+The project uses custom Express middleware.
+
+### Logger Middleware
+
+Logs every incoming request with its HTTP method and endpoint.
+
+### Validation Middleware
+
+Validates request bodies before they reach the controllers.
+
+Validation modules include:
+
+- Authentication Validation
+- User Validation
+- Document Validation
+- Section Validation
+- Item Validation
+- AI Validation
+- Application Validation
 
 ---
 
@@ -286,6 +348,14 @@ Tracks job applications.
 - Update Application
 - Delete Application
 
+## Architecture Features
+- MVC Architecture
+- Modular Controllers
+- Centralized Database Model
+- Modular Route Registration
+- Request Validation Middleware
+- Logger Middleware
+
 ---
 
 # 📚 Concepts Practiced
@@ -312,6 +382,13 @@ Tracks job applications.
 - Nested CRUD Operations
 - Route Parameters
 - Snapshot Versioning
+- MVC Architecture
+- Controllers
+- Models
+- Express Middleware
+- Request Validation
+- Logging Middleware
+- Modular Routing
 
 ---
 
@@ -534,17 +611,22 @@ All APIs have been tested using **Postman**.
 
 # 🎉 Project Status
 
-## ✅ Completed Modules
+## ✅ Completed
 
-- Authentication
-- Users
-- Documents
-- Templates
-- AI
-- Applications
-- Sections
-- Section Items
-- Version History
+- Authentication APIs
+- User APIs
+- Document APIs
+- Section APIs
+- Item APIs
+- Version APIs
+- Template APIs
+- AI APIs
+- Application APIs
+- MVC Architecture
+- Controllers
+- Models
+- Middleware
+- Modular Routing
 
 **Status:** ✅ Internship Backend Completed
 
@@ -552,12 +634,14 @@ All APIs have been tested using **Postman**.
 
 # 📊 Project Statistics
 
-- **Modules Completed:** 8 / 8
-- **REST APIs Implemented:** 38
-- **CRUD Modules:** 8
+- **Architecture:** MVC (Model-View-Controller)
+- **Modules:** 9
+- **REST APIs:** 38+
 - **HTTP Methods:** GET, POST, PUT, DELETE
-- **Data Storage:** JSON File
-- **API Testing:** Postman
+- **Middleware:** Logger & Validation
+- **Controllers:** 9
+- **Model:** Centralized JSON Database
+- **Testing Tool:** Postman
 
 ---
 

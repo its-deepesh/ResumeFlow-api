@@ -11,6 +11,18 @@
       "name": "Divya Bora",
       "email": "divya235@gmail.com",
       "password": "98765"
+    },
+    {
+      "id": 1784360649125,
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "password": "41315"
+    },
+    {
+      "id": 1784371134116,
+      "name": "Aman",
+      "email": "aman@gmail.com",
+      "password": "153246"
     }
   ],
   "documents": [
@@ -61,7 +73,13 @@
       "createdBy": 1784025792324,
       "createdAt": "2026-07-16T06:01:26.789Z",
       "updatedAt": "2026-07-16T12:50:07.920Z",
-      "sections": [],
+      "sections": [
+        {
+          "id": 1784292773251,
+          "name": "Education",
+          "items": []
+        }
+      ],
       "versions": [
         {
           "id": 1784290262345,
@@ -87,6 +105,38 @@
               ]
             },
             "sections": []
+          }
+        },
+        {
+          "id": 1784293067062,
+          "versionNumber": 2,
+          "createdAt": "2026-07-17T12:57:47.062Z",
+          "snapshot": {
+            "title": "Google Resume",
+            "template": "Professional",
+            "content": {
+              "personalInfo": {
+                "name": "Divya Bora",
+                "email": "divya235@gmail.com"
+              },
+              "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Node.js",
+                "Express.js"
+              ],
+              "projects": [
+                "ResumeFlow"
+              ]
+            },
+            "sections": [
+              {
+                "id": 1784292773251,
+                "name": "Education",
+                "items": []
+              }
+            ]
           }
         }
       ]
@@ -188,6 +238,13 @@
       "position": "Software Developer",
       "status": "Recruited",
       "appliedDate": "2026-07-16"
+    },
+    {
+      "id": 1784361856446,
+      "company": "Microsoft",
+      "position": "Software Developer",
+      "status": "Recruited",
+      "appliedDate": "2026-07-15"
     }
   ]
 }

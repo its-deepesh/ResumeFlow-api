@@ -1,49 +1,12 @@
 const express = require("express");
-const { readData } = require("../utils/file");
+const { getAllTemplates, getTemplateById } = require("../controllers/templatesController");
 
 const router = express.Router();
 
 // Retrieve all resume templates
-router.get("/", (req, res) => {
-    const jsonData = readData();
-
-    const templates = jsonData.templates;
-
-    if (templates.length === 0) {
-        return res.status(404).json({
-            success: false,
-            message: "No templates found."
-        });
-    }
-
-    return res.status(200).json({
-        success: true,
-        templates
-    });
-});
+router.get("/", getAllTemplates);
 
 // Retrieve a specific resume template by ID
-router.get("/:id", (req, res) => {
-    const jsonData = readData();
-
-    const id = Number(req.params.id);
-
-    const template = jsonData.templates.find(
-        template => template.id === id
-    );
-
-    if(!template){
-        return res.status(404).json({
-            success: false,
-            message: "Template not found."
-        });
-    }
-
-    return res.status(200).json({
-        success: true,
-        template
-    });
-});
-
+router.get("/:id", getTemplateById);
 
 module.exports = router;

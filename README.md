@@ -1,8 +1,8 @@
 # ResumeFlow API
 
-A RESTful backend API built with **Node.js** and **Express.js** for the ResumeFlow project. This project is being developed as part of my Full Stack Development Internship.
+The ResumeFlow API is a RESTful backend application built with Node.js and Express.js as part of my Full Stack Development Internship.
 
-The API currently supports authentication, user management, resume document management, template management, AI-powered mock endpoints, and job application tracking using a JSON file as the data store.
+It provides APIs for user authentication, profile management, resume document management, resume templates, AI-powered mock services, job application tracking, resume sections & items, and document version history using a JSON file as the data store.
 
 ---
 
@@ -34,12 +34,21 @@ resume-api/
 ├── utils/
 │   └── file.js
 │
+├── screenshots/
+│   ├── auth/
+│   ├── users/
+│   ├── documents/
+│   ├── templates/
+│   ├── ai/
+│   ├── applications/
+│   ├── sections/
+│   └── versions/
+│
 ├── data.json
 ├── app.js
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
-├── screenshots/
 └── README.md
 ```
 
@@ -147,6 +156,38 @@ http://localhost:3000
 | GET | `/api/applications/:id` | Get application by ID |
 | PUT | `/api/applications/:id` | Update application |
 | DELETE | `/api/applications/:id` | Delete application |
+
+---
+
+## 📑 Sections
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/documents/:id/sections` | Create a section |
+| GET | `/api/documents/:id/sections` | Get all sections |
+| PUT | `/api/documents/:id/sections/:sectionId` | Update a section |
+| DELETE | `/api/documents/:id/sections/:sectionId` | Delete a section |
+
+---
+
+## 📝 Section Items
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/documents/:id/sections/:sectionId/items` | Add item to section |
+| GET | `/api/documents/:id/sections/:sectionId/items` | Get all items |
+| PUT | `/api/documents/:id/sections/:sectionId/items/:itemId` | Update an item |
+| DELETE | `/api/documents/:id/sections/:sectionId/items/:itemId` | Delete an item |
+
+---
+
+## 🕒 Versions
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/documents/:id/versions` | Create document version |
+| GET | `/api/documents/:id/versions` | Get all versions |
+| GET | `/api/documents/:id/versions/:versionId` | Get version by ID |
 
 ---
 
@@ -267,6 +308,48 @@ Tracks job applications.
 - API Modularization
 - Mock API Development
 - JSON Data Persistence
+- Nested Resources
+- Nested CRUD Operations
+- Route Parameters
+- Snapshot Versioning
+
+---
+
+## 📑 Sections Module
+
+Manage resume sections inside each document.
+
+### Features
+
+- Create Resume Sections
+- View Resume Sections
+- Update Resume Sections
+- Delete Resume Sections
+
+---
+
+## 📝 Items Module
+
+Manage individual items inside each resume section.
+
+### Features
+
+- Add Items
+- View Items
+- Update Items
+- Delete Items
+
+---
+
+## 🕒 Version History Module
+
+Maintain snapshots of documents.
+
+### Features
+
+- Create Version Snapshots
+- View Version History
+- View Version Details
 
 ---
 
@@ -405,32 +488,76 @@ All APIs have been tested using **Postman**.
 
 ---
 
-# 📈 Current Progress
+## Sections APIs
 
-## ✅ Completed
+<div align="center">
 
-- Authentication APIs
-- User APIs
-- Document APIs
-- Template APIs
-- AI APIs
-- Application APIs
-- Utility Functions
+<img src="screenshots/sections/create-section.png" width="45%">
+<img src="screenshots/sections/get-sections.png" width="45%">
 
-## 🚧 In Progress
+<br><br>
 
-- Sections APIs
-- Versions APIs
+<img src="screenshots/sections/update-section.png" width="45%">
+<img src="screenshots/sections/delete-section.png" width="45%">
+
+</div>
+
+---
+
+## Section Items APIs
+
+<div align="center">
+
+<img src="screenshots/items/create-item.png" width="30%">
+<img src="screenshots/items/get-items.png" width="30%">
+<img src="screenshots/items/update-item.png" width="30%">
+
+<br><br>
+
+<img src="screenshots/items/delete-item.png" width="45%">
+
+</div>
+
+---
+
+## Versions APIs
+
+<div align="center">
+
+<img src="screenshots/versions/create-version.png" width="30%">
+<img src="screenshots/versions/get-versions.png" width="30%">
+<img src="screenshots/versions/get-version-by-id.png" width="30%">
+
+</div>
+
+---
+
+# 🎉 Project Status
+
+## ✅ Completed Modules
+
+- Authentication
+- Users
+- Documents
+- Templates
+- AI
+- Applications
+- Sections
+- Section Items
+- Version History
+
+**Status:** ✅ Internship Backend Completed
 
 ---
 
 # 📊 Project Statistics
 
-- **Modules Completed:** 6 / 8
-- **REST APIs Implemented:** 27+
-- **HTTP Methods Used:** GET, POST, PUT, DELETE
+- **Modules Completed:** 8 / 8
+- **REST APIs Implemented:** 38
+- **CRUD Modules:** 8
+- **HTTP Methods:** GET, POST, PUT, DELETE
 - **Data Storage:** JSON File
-- **API Testing Tool:** Postman
+- **API Testing:** Postman
 
 ---
 
@@ -438,6 +565,14 @@ All APIs have been tested using **Postman**.
 
 **Deepesh Singh**
 
-BCA Student | Full Stack Developer (Learning)
+BCA Student | Aspiring Full Stack Developer
 
-GitHub: https://github.com/its-deepesh
+**GitHub:** https://github.com/its-deepesh
+
+### Currently Learning
+
+- Node.js
+- Express.js
+- REST APIs
+- MongoDB
+- React.js
